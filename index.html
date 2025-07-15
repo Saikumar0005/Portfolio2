@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Sai Kumar Tiruvidhi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="port">Portfolio</div>
+        <div class="ham">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#platforms">Platforms</a></li>
+                <li><a href="blog.html">My Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <h1>SAI KUMAR TIRUVIDHI</h1>
+        <p>Frontend Developer | AI Enthusiast | Problem Solver</p>
+        <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    <section class="About" id="about">
+        <img id="pro" src="/photos/profile.jpg" alt="Profile Picture">
+        <div class="about-content">
+            <div class="about-tabs">
+                <button class="tab-btn active" data-tab="about-me">About Me</button>
+                <button class="tab-btn" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="interests">Interests</button>
+            </div>
+            <div class="tab-content active" id="about-me">
+                <p class="profile-text">
+                    Passionate B.Tech graduate specializing in Computer Science with expertise in frontend development and AI.
+                    Skilled in creating responsive web applications using modern technologies like React.js and Node.js.
+                    Strong problem-solving abilities with experience in building machine learning models for real-world applications.
+                </p>
+                <p class="profile-text">
+                    My journey in tech began with a curiosity about how things work, which evolved into building projects that solve practical problems. I believe in continuous learning and staying updated with the latest technologies to create impactful solutions.
+                </p>
+            </div>
+            <div class="tab-content" id="education">
+                <p class="profile-text">
+                    <strong>B.Tech in Computer Science</strong><br>
+                    Vignan's Lara Institute of Technology & Science<br>
+                    2022 - 2026 | CGPA: 8.21/10
+                </p>
+                <p class="profile-text">
+                    <strong>Intermediate (12th)</strong><br>
+                    Narayana Junior College<br>
+                    2020 - 2022 | Percentage: 95%
+                </p>
+                <p class="profile-text">
+                    <strong>Secondary School (10th)</strong><br>
+                    Vijayavani High School<br>
+                    2019 - 2020 | GPA: 10/10
+                </p>
+            </div>
+            <div class="tab-content" id="interests">
+                <p class="profile-text">
+                    <strong>Web Development:</strong> Building interactive and user-friendly web applications with modern frameworks.
+                </p>
+                <p class="profile-text">
+                    <strong>Artificial Intelligence:</strong> Exploring machine learning and deep learning for predictive analytics.
+                </p>
+                <p class="profile-text">
+                    <strong>Open Source:</strong> Contributing to open-source projects and sharing knowledge with the community.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Programming</h3>
+                <div class="skills-list">
+                    <span class="skill-item"><i class="fab fa-python"></i> Python</span>
+                    <span class="skill-item"><i class="fas fa-copyright"></i> C</span>
+                    <span class="skill-item"><i class="fab fa-java"></i> Java</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                <div class="skills-list">
+                    <span class="skill-item"><i class="fab fa-html5"></i> HTML</span>
+                    <span class="skill-item"><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span class="skill-item"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="skill-item"><i class="fab fa-react"></i> React</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-brain"></i> AI/ML</h3>
+                <div class="skills-list">
+                    <span class="skill-item"><i class="fas fa-chart-line"></i> Machine Learning</span>
+                    <span class="skill-item"><i class="fas fa-robot"></i> Deep Learning</span>
+                    <span class="skill-item"><i class="fas fa-eye"></i> Computer Vision</span>
+                    <span class="skill-item"><i class="fas fa-comments"></i> NLP</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Databases</h3>
+                <div class="skills-list">
+                    <span class="skill-item"><i class="fas fa-server"></i> MySQL</span>
+                    <span class="skill-item"><i class="fas fa-leaf"></i> MongoDB</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-book"></i> Core Subjects</h3>
+                <div class="skills-list">
+                    <span class="skill-item"><i class="fas fa-project-diagram"></i> Data Structures</span>
+                    <span class="skill-item"><i class="fas fa-sitemap"></i> Algorithms</span>
+                    <span class="skill-item"><i class="fas fa-network-wired"></i> Computer Networks</span>
+                    <span class="skill-item"><i class="fas fa-lock"></i> Cyber Security</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools</h3>
+                <div class="skills-list">
+                    <span class="skill-item"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="skill-item"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="skill-item"><i class="fas fa-terminal"></i> VS Code</span>
+                    <span class="skill-item"><i class="fas fa-terminal"></i> Google Colab</span>
+                    <span class="skill-item"><i class="fab fa-figma"></i> Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Voice Assistant" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3>Voice Assistant</h3>
+                    <p>Python-based voice assistant that processes commands and performs tasks like web searches and media playback.</p>
+                    <div class="project-skills">
+                        <span class="project-skill"><i class="fab fa-python"></i> Python</span>
+                        <span class="project-skill"><i class="fas fa-microphone"></i> SpeechRecognition</span>
+                        <span class="project-skill"><i class="fas fa-code"></i> VS Code</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Saikumar0005/VoiceAssistant" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="OCR Text Extractor" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3>OCR Text Extractor</h3>
+                    <p>Extracts text from images using EasyOCR and exports to multiple formats like Word and PDF.</p>
+                    <div class="project-skills">
+                        <span class="project-skill"><i class="fab fa-python"></i> Python</span>
+                        <span class="project-skill"><i class="fas fa-font"></i> EasyOCR</span>
+                        <span class="project-skill"><i class="fas fa-image"></i> OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Saikumar0005/OCR-Based-Text-Extractor" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img-container">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Disease Prediction" class="project-img">
+                </div>
+                <div class="project-content">
+                    <h3>Disease Prediction</h3>
+                    <p>Machine learning model to predict diseases from symptoms using patient data.</p>
+                    <div class="project-skills">
+                        <span class="project-skill"><i class="fab fa-python"></i> Python</span>
+                        <span class="project-skill"><i class="fas fa-brain"></i> Machine Learning</span>
+                        <span class="project-skill"><i class="fas fa-chart-line"></i> Streamlit</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Saikumar0005/Prediction" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/Saikumar0005/Prediction" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">Multi-Disease Prediction System</h3>
+                    <span class="experience-date">Jun 2023 - Aug 2023</span>
+                </div>
+                <p class="experience-company">Internship Project | AI Healthcare Solutions</p>
+                <p class="experience-description">
+                    Developed a machine learning model to predict multiple diseases based on patient symptoms and medical history.
+                    Implemented feature engineering and model optimization techniques to achieve 92% accuracy. Created a user-friendly web interface using Streamlit for doctors to input patient data and receive predictions.
+                </p>
+                <div class="experience-skills">
+                    <span class="experience-skill">Python</span>
+                    <span class="experience-skill">Machine Learning</span>
+                    <span class="experience-skill">Streamlit</span>
+                    <span class="experience-skill">Pandas</span>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">Personal Portfolio Website</h3>
+                    <span class="experience-date">Jan 2023 - Present</span>
+                </div>
+                <p class="experience-company">Freelance Project</p>
+                <p class="experience-description">
+                    Designed and developed a responsive portfolio website to showcase projects and skills. Implemented modern UI/UX principles with animations and interactive elements. Optimized for performance and SEO to increase visibility.
+                </p>
+                <div class="experience-skills">
+                    <span class="experience-skill">HTML</span>
+                    <span class="experience-skill">CSS</span>
+                    <span class="experience-skill">JavaScript</span>
+                    <span class="experience-skill">React.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="platforms-section" id="platforms">
+        <h2>Coding Platforms</h2>
+        <div class="platforms-container">
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="platform-name">LeetCode</h3>
+                <p class="platform-username">@SaiKumar05</p>
+                <a href="https://leetcode.com/u/SaiKumar05/" class="platform-link" target="_blank">Visit</a>
+            </div>
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3 class="platform-name">GitHub</h3>
+                <p class="platform-username">@Saikumar0005</p>
+                <a href="https://github.com/Saikumar0005" class="platform-link" target="_blank">Visit</a>
+            </div>
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 class="platform-name">CodeChef</h3>
+                <p class="platform-username">@saikumar_05</p>
+                <a href="https://www.codechef.com/users/saikumar_05" class="platform-link" target="_blank">Visit</a>
+            </div>
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="platform-name">GeeksforGeeks</h3>
+                <p class="platform-username">@saikumartiruvidhi</p>
+                <a href="https://www.geeksforgeeks.org/user/tsaikuma6r48/" class="platform-link" target="_blank">Visit</a>
+            </div>
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-hackerrank"></i>
+                </div>
+                <h3 class="platform-name">HackerRank</h3>
+                <p class="platform-username">@saikumar_t05</p>
+                <a href="https://www.hackerrank.com/profile/tsaikumar70322" class="platform-link" target="_blank">Visit</a>
+            </div>
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <h3 class="platform-name">LinkedIn</h3>
+                <p class="platform-username">@saikumar-tiruvidhi</p>
+                <a href="https://www.linkedin.com/in/saikumar-tiruvidhi/" class="platform-link" target="_blank">Visit</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a href="mailto:tsaikumar70322@gmail.com">tsaikumar70322@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <a href="tel:+919876543210">+91 9381886983</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Kurnool, Andhra Pradesh, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p class="copyright">&copy; <span id="year"></span> Sai Kumar Tiruvidhi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

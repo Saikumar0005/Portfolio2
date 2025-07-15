@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Sai Kumar Tiruvidhi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1abc9c;
+            --secondary: #2c3e50;
+            --light: #f4f4f9;
+            --dark: #333;
+            --gray: #666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: var(--secondary);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .port {
+            font-size: 1.8rem;
+            font-weight: bold;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-bar ul li {
+            margin-left: 2rem;
+        }
+
+        .nav-bar ul li a {
+            color: #fff;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-bar ul li a:hover {
+            color: var(--primary);
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .page-header h1::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .page-header p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-details {
+            padding: 1.8rem;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .project-technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .technology {
+            background: #e0f7fa;
+            color: #00838f;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .technology i {
+            margin-right: 6px;
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.7rem 1.3rem;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            background: #16a085;
+            transform: translateY(-2px);
+        }
+
+        .project-link i {
+            margin-right: 8px;
+        }
+
+        .github-link {
+            background: #333;
+        }
+
+        .github-link:hover {
+            background: #222;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--secondary);
+            color: #fff;
+            margin-top: 3rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link {
+            color: #fff;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar ul {
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                background: var(--secondary);
+                width: 100%;
+                padding: 1rem;
+                transition: left 0.3s;
+            }
+
+            .nav-bar ul.active {
+                left: 0;
+            }
+
+            .nav-bar ul li {
+                margin: 1rem 0;
+            }
+
+            .ham {
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <div class="port">Portfolio</div>
+        <nav class="nav-bar">
+            <ul id="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#platforms">Platforms</a></li>
+                <li><a href="/final.html">My Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="ham" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Projects Section -->
+    <main class="projects-container">
+        <div class="page-header">
+            <h1>My Projects</h1>
+            <p>Explore all my projects with detailed descriptions, technologies used, and links to live demos and source code.</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Voice Assistant">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">Voice Assistant</h3>
+                    <p class="project-description">
+                        A Python-based voice assistant that processes voice commands to perform tasks like web searches, 
+                        media playback, and weather updates. Uses speech recognition and text-to-speech technologies.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="technology"><i class="fab fa-python"></i> Python</span>
+                        <span class="technology"><i class="fas fa-microphone"></i> SpeechRecognition</span>
+                        <span class="technology"><i class="fas fa-code"></i> VS Code</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/Saikumar0005/VoiceAssistant" class="project-link github-link" target="_blank">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="OCR Text Extractor">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">OCR Text Extractor</h3>
+                    <p class="project-description">
+                        An application that extracts text from images using OCR technology. Supports multiple output formats 
+                        including Word and PDF with text preprocessing capabilities.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="technology"><i class="fab fa-python"></i> Python</span>
+                        <span class="technology"><i class="fas fa-font"></i> EasyOCR</span>
+                        <span class="technology"><i class="fas fa-image"></i> OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/Saikumar0005/OCR-Based-Text-Extractor" class="project-link github-link" target="_blank">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Disease Prediction">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">Disease Prediction System</h3>
+                    <p class="project-description">
+                        Machine learning model that predicts potential diseases based on patient symptoms and medical history. 
+                        Features a web interface for doctors to input patient data.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="technology"><i class="fab fa-python"></i> Python</span>
+                        <span class="technology"><i class="fas fa-brain"></i> Machine Learning</span>
+                        <span class="technology"><i class="fas fa-chart-line"></i> Streamlit</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/Saikumar0005/Prediction" class="project-link github-link" target="_blank">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Portfolio Website">
+                </div>
+                <div class="project-details">
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-description">
+                        A responsive personal portfolio website showcasing my skills, projects, and experience. 
+                        Built with modern web technologies and optimized for performance.
+                    </p>
+                    <div class="project-technologies">
+                        <span class="technology"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="technology"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="technology"><i class="fab fa-js"></i> JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="index.html" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://github.com/Saikumar0005/Portfolio" class="project-link github-link" target="_blank">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more projects as needed -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/saikumar-tiruvidhi/" class="social-link" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Saikumar0005" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://leetcode.com/u/SaiKumar05/" class="social-link" target="_blank">
+                <i class="fas fa-code"></i>
+            </a>
+        </div>
+        <p class="copyright">&copy; <span id="current-year"></span> Sai Kumar Tiruvidhi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-bar a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Add animation to project cards when they come into view
+        const projectCards = document.querySelectorAll('.project-card');
+        const options = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        projectCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
